@@ -1,0 +1,26 @@
+{
+  "name": "earthsonic",
+  "version": "1.0.0",
+  "description": "EARTHSONIC \u2014 NASA Earth Data, Heard. Full-stack: Express API + React frontend.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node ./node_modules/concurrently/dist/bin/concurrently.js --names \"API,UI\" --prefix-colors \"cyan,magenta\" \"npm run dev:api\" \"npm run dev:ui\"",
+    "dev:api": "cd backend && node --watch src/server.js",
+    "dev:ui": "node ./node_modules/vite/bin/vite.js",
+    "build": "node ./node_modules/vite/bin/vite.js build",
+    "preview": "node ./node_modules/vite/bin/vite.js preview",
+    "start:api": "cd backend && node src/server.js",
+    "check:api": "node --check backend/src/server.js && node --check backend/src/routes/nasa.js"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.3.0",
+    "concurrently": "^9.1.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "vite": "^8.3.8"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

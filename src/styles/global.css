@@ -1,0 +1,43 @@
+/* ============================================================
+   EARTHSONIC — Global Design Tokens & Base Styles
+   ============================================================ */
+
+:root {
+  --color-bg:            #0d0f14;
+  --color-surface:       #161a22;
+  --color-surface-raised:#1e2330;
+  --color-border:        #2a3040;
+  --color-text:          #e8ecf4;
+  --color-muted:         #7a8299;
+  --color-accent:        #00b8d4;
+  --color-accent-hover:  #00e5ff;
+  --color-warm:          #ef5350;
+  --color-cool:          #42a5f5;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: var(--color-accent);
+}
